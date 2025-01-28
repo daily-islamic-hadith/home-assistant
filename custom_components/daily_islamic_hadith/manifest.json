@@ -1,0 +1,10 @@
+{
+  "domain": "daily_islamic_hadith",
+  "name": "Daily Islamic Hadith",
+  "version": "1.0.0",
+  "documentation": "https://github.com/osama1225/daily-islamic-hadith-homeassistant",
+  "dependencies": [],
+  "requirements": [],
+  "config_flow": true,
+  "codeowners": ["@osama1225"]
+}
