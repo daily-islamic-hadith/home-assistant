@@ -23,9 +23,11 @@ class DailyHadithUpdateCoordinator:
         if hadith_lang == LANG_AR:
             self.hadith_key = "hadithArabic"
             self.hadith_explanation_key = "hadithExplanationArabic"
+            self.hadith_lang = hadith_lang
         else:
             self.hadith_key = "hadithEnglish"
             self.hadith_explanation_key = "hadithExplanationEnglish"
+            self.hadith_lang = hadith_lang
 
     async def async_update_data(self):
         """Fetch data from the API."""
@@ -37,6 +39,7 @@ class DailyHadithUpdateCoordinator:
                     self.data = {
                         "hadith": json_response.get(self.hadith_key),
                         "hadith_explanation": json_response.get(self.hadith_explanation_key),
+                        "hadith_language": self.hadith_lang
                     }
                     self.last_update = as_local(datetime.now())
                     _LOGGER.info("Successfully updated daily hadith: %s", self.data)
@@ -74,6 +77,7 @@ class HadithAPISensor(SensorEntity):
         self._attributes = {
             "hadith": self.coordinator.data.get("hadith"),
             "explanation": self.coordinator.data.get("hadith_explanation"),
+            "language": self.coordinator.data.get("hadith_language"),
             "last_update": self.coordinator.last_update.isoformat() if self.coordinator.last_update else None,
         }
         self._state = "Updated"
