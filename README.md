@@ -78,6 +78,28 @@ entities:
   </table>
 ```
 
+#### Markdown Card With card-mod
+A sample styling using card-mode (If you have card-mode already installed) 
+```yaml
+type: markdown
+content: |
+  {{states.sensor.daily_hadith.attributes['hadith']}}
+
+  {{states.sensor.daily_hadith.attributes['explanation']}}
+title: Hadith Of The Day
+card_mod:
+  style: |
+    ha-card {
+    text-align: center
+    }
+    ha-markdown {
+      direction: {{ 'rtl' if state_attr('sensor.daily_hadith', 'language') == 'AR' else 'ltr'}};
+      text-align: {{ 'right' if  state_attr('sensor.daily_hadith', 'language') == 'AR' else 'left' }};
+      font-size: 1.5rem;
+      
+    }
+```
+
 ### Using the Hadith in Automations
 
 TBD
