@@ -1,0 +1,15 @@
+{
+  "name": "Daily Islamic Hadith",
+  "repository": "osama1225/daily-islamic-hadith",
+  "version": "1.0.0",
+  "slug": "daily_islamic_hadith",
+  "dependencies": [],
+  "documentation": "https://github.com/osama1225/daily-islamic-hadith/blob/main/README.md",
+  "homepage": "https://github.com/osama1225/daily-islamic-hadith",
+  "issues": "https://github.com/osama1225/daily-islamic-hadith/issues",
+  "hacs": {
+    "category": "integration",
+    "installation": "manual",
+    "updated": "2025-02-06"
+  }
+}

@@ -9,7 +9,12 @@ The sensor fetches a Hadith along with an explanation and store them in the sens
 
 ### With HACS
 
-NOT YET
+If you have HACS installed on your Home Assistant, you can use it to install the *Daily Islamic Hadith* integration.
+
+1. Go to your HACS dashboard, click on the settings icon (three dots in the top right corner), and select *Custom
+Repositories*.  
+2. In the *Repository* text field, enter the URL of this repository: https://github.com/osama1225/daily-islamic-hadith  
+3. Then, select *Integration* in the *Type* field and click the *Add* button to complete the setup.
 
 ### Manually
 
