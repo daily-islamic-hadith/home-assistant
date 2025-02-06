@@ -1,7 +1,7 @@
 {
   "domain": "daily_islamic_hadith",
   "name": "Daily Islamic Hadith",
-  "version": "1.0.0",
+  "version": "1.0",
   "documentation": "https://github.com/daily-islamic-hadith/home-assistant",
   "dependencies": [],
   "requirements": [],
