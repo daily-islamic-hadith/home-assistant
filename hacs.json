@@ -1,12 +1,12 @@
 {
   "name": "Daily Islamic Hadith",
-  "repository": "osama1225/daily-islamic-hadith",
+  "repository": "daily-islamic-hadith/home-assistant",
   "version": "1.0.0",
   "slug": "daily_islamic_hadith",
   "dependencies": [],
-  "documentation": "https://github.com/osama1225/daily-islamic-hadith/blob/main/README.md",
-  "homepage": "https://github.com/osama1225/daily-islamic-hadith",
-  "issues": "https://github.com/osama1225/daily-islamic-hadith/issues",
+  "documentation": "https://github.com/daily-islamic-hadith/home-assistant/blob/main/README.md",
+  "homepage": "https://github.com/daily-islamic-hadith/home-assistant",
+  "issues": "https://github.com/daily-islamic-hadith/home-assistant/issues",
   "hacs": {
     "category": "integration",
     "installation": "manual",

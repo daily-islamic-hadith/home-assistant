@@ -13,7 +13,7 @@ If you have HACS installed on your Home Assistant, you can use it to install the
 
 1. Go to your HACS dashboard, click on the settings icon (three dots in the top right corner), and select *Custom
 Repositories*.  
-2. In the *Repository* text field, enter the URL of this repository: https://github.com/osama1225/daily-islamic-hadith  
+2. In the *Repository* text field, enter the URL of this repository: https://github.com/daily-islamic-hadith/home-assistant  
 3. Then, select *Integration* in the *Type* field and click the *Add* button to complete the setup.
 
 ### Manually
@@ -121,4 +121,4 @@ This integration is licensed under the MIT License. See the [LICENSE](LICENSE) f
 ## Support
 
 If you encounter any issues or need help with installation, feel free to open an issue on
-the [GitHub repository](https://github.com/osama1225/daily-islamic-hadith-homeassistant).
+the [GitHub repository](https://github.com/daily-islamic-hadith/home-assistant).
