@@ -42,6 +42,8 @@ The integration creates a sensor of id `daily_hadith` that contains two importan
 - **`hadith`**: The text of the daily Hadith.
 - **`explanation`**: The explanation of the Hadith.
 
+The sensor's attributes will be updated automatically every day at 01:00AM. Which means a new Hadith will be available.
+
 You can view these attributes in the entity’s details in the Home Assistant UI or use them in automations and scripts.
 
 ## Example
