@@ -113,6 +113,11 @@ class HadithAPISensor(SensorEntity):
         self.coordinator.fetch_mode = DAILY_FETCH_MODE
         await self.async_update()
 
+    async def handle_service_call(self):
+        """Fetch new  random data and update state."""
+        self.coordinator.fetch_mode = RANDOM_FETCH_MODE
+        await self.async_update()
+
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
     async def config_update_listener(hass, config_entry):

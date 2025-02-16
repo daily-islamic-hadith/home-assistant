@@ -1,0 +1,3 @@
+fetch_new_hadith:
+  name: Fetch New Hadith
+  description: "Fetch a new random hadith and update the daily_hadith sensor."
