@@ -37,14 +37,20 @@ custom_components directory of your Home Assistant installation (create it if it
 
 ## How It Works
 
-The integration creates a sensor of id `daily_hadith` that contains two important attributes:
+The integration offers the following:
 
-- **`hadith`**: The text of the daily Hadith.
-- **`explanation`**: The explanation of the Hadith.
+- A sensor of id `daily_hadith` that contains two important attributes:
+   - **`hadith`**: The text of the daily Hadith.
+   - **`explanation`**: The explanation of the Hadith.
+- A service `fetch_new_hadith` that would update the sensor with a new random hadith whenever called.
 
-The sensor's attributes will be updated automatically every day at 01:00AM. Which means a new Hadith will be available.
+`daily_hadith` sensor is updated with a new hadith in two ways:
+
+- Automatically every day at 01:00AM.
+- A call to service `fetch_new_hadith`.
 
 You can view these attributes in the entity’s details in the Home Assistant UI or use them in automations and scripts.
+
 
 ## Example
 
