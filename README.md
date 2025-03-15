@@ -115,7 +115,37 @@ card_mod:
 
 ### Using the Hadith in Automations
 
-TBD
+You can use the `fetch_new_hadith` service to update the sensor with a new Hadith at specific times or intervals. 
+Then, you can do any of the following ideas:
+1. Announce the fetched Hadith using text to speach action from google.
+```yaml
+mode: single
+triggers:
+  - trigger: time
+    at: "14:00:00"
+conditions: []
+actions:
+  - action: daily_islamic_hadith.fetch_new_hadith
+    data: {}
+  - wait_for_trigger:
+      - trigger: state
+        entity_id:
+          - sensor.daily_hadith
+    continue_on_timeout: false
+    timeout:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - action: tts.google_translate_say
+    metadata: {}
+    data:
+      cache: false
+      entity_id: #YOUR SPEAKER ENTITY ID
+      language: ar
+      message: "{{states.sensor.daily_hadith.attributes['hadith']}}"
+```
+2. Send the Hadith to a Telegram bot.
 
 ## Contributions
 
